@@ -16,9 +16,9 @@
   </p>
 </div>
 
-## News
+## 🔥 News
 
-- [2026/05/27] We release the technical report and project page for **LoMo**.
+- [2026/05/27] 🔥🔥 We release the technical report and project page for **LoMo**.
 
 ## Introduction
 
@@ -29,23 +29,25 @@ Vision-Language Models still show **carrier sensitivity**: changing a textual qu
 </p>
 <p align="center"><em>Rendered questions reduce accuracy. Larger representation gaps cause larger drops. LoMo pulls equivalent text/image carriers closer.</em></p>
 
-## Highlights
+### ✨ Highlights:
 
 LoMo is a lightweight, architecture-agnostic data curation recipe for standard SFT. It localizes a coherent text span, renders it as an image, and substitutes it back into the original context, creating a `text -> visual carrier -> text` sequence that provides an extra cross-carrier alignment signal. Across 13 multimodal benchmarks, LoMo improves over Standard SFT by **+2.68** points on LLaVA-OneVision-1.5-8B and **+2.82** points on Qwen3.5-9B, while requiring no architectural changes or inference-time overhead.
-
-## Method
 
 <p align="center">
   <img src="page/static/images/fig_lomo_overview.png" alt="LoMo overview" width="900">
 </p>
 
-## Main Results
-
 <p align="center">
   <img src="page/static/images/fig_benchmark_gains.png" alt="Benchmark gains across two backbones" width="900">
 </p>
 
-## Citation
+## ✨ Evaluation
+
+## 📧 Contact
+
+For questions or suggestions, please open an issue in this repository.
+
+## ⭐ Citation
 
 ```bibtex
 @article{lomo2026,
@@ -55,7 +57,3 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
   year={2026}
 }
 ```
-
-## Contact
-
-For questions or suggestions, please open an issue in this repository.
