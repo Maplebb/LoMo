@@ -1,7 +1,15 @@
 <div align="center">
   <h1 align="center">LoMo: Local Modality Substitution for Deeper Vision-Language Fusion</h1>
 
-  Anonymous Author(s)
+  Feng Han<sup>1,2</sup>, Zhixiong Zhang<sup>2,3</sup>, Zheming Liang<sup>2,4</sup>, Yibin Wang<sup>1,2</sup>, Jiaqi Wang<sup>2,5,*</sup>
+
+  <br>
+
+  <sup>1</sup>Fudan University, <sup>2</sup>Shanghai Innovation Institute, <sup>3</sup>Shanghai Jiao Tong University
+
+  <br>
+
+  <sup>4</sup>University of Science and Technology of China, <sup>5</sup>JD.COM
 
   <a href="./LoMo-Technical-Report.pdf">
     <img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF">
@@ -17,7 +25,7 @@
 
 ## Introduction
 
-Vision-Language Models (VLMs) can reason over both language and images, but they remain surprisingly sensitive to the *carrier* of the same semantic content. When a textual question is rendered as an image, current VLMs suffer large accuracy drops even though the meaning is unchanged. We identify this as a **carrier sensitivity** problem caused by a modality gap between semantically equivalent text tokens and visual text pixels.
+Vision-Language Models (VLMs) can reason over both language and images, but replacing a textual question with its rendered-image counterpart should ideally leave model performance essentially unchanged because the semantics are the same. In practice, this local modality substitution induces dramatic performance degradation. We identify this as a **carrier sensitivity** problem caused by a modality gap between equivalent text and visual carriers.
 
 **LoMo** introduces **Local Modality Substitution**, a lightweight and architecture-agnostic data curation paradigm for deeper vision-language fusion. LoMo selects a semantically coherent span from a text-only prompt, renders that span as an image, applies semantics-preserving perceptual distortions, and substitutes the image back into the original prompt. The resulting `text -> visual carrier -> text` sequence forces the model to integrate equivalent information across carriers during standard supervised fine-tuning.
 
@@ -84,7 +92,7 @@ The 50% rewrite ratio performs best in the reported setting, suggesting that LoM
 ```bibtex
 @article{lomo2026,
   title={LoMo: Local Modality Substitution for Deeper Vision-Language Fusion},
-  author={Anonymous Author(s)},
+  author={Feng Han and Zhixiong Zhang and Zheming Liang and Yibin Wang and Jiaqi Wang},
   journal={Technical Report},
   year={2026}
 }

@@ -32,6 +32,18 @@ body {
   max-width: 760px;
 }
 
+.publication-affiliations {
+  color: var(--lomo-muted);
+  line-height: 1.7;
+  margin-top: 0.35rem;
+}
+
+.publication-authors .author-block,
+.publication-affiliations .author-block {
+  margin-left: 0.35rem;
+  margin-right: 0.35rem;
+}
+
 .publication-links {
   margin-top: 1rem;
 }
@@ -49,6 +61,11 @@ body {
 
 .subtitle {
   color: var(--lomo-muted);
+}
+
+.lomo-copy {
+  line-height: 1.55;
+  text-align: left;
 }
 
 .figure-block {

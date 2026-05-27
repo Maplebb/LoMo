@@ -22,8 +22,21 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">LoMo: Local Modality Substitution for Deeper Vision-Language Fusion</h1>
-            <p class="subtitle is-5 publication-authors">Anonymous Author(s)</p>
-            <p class="publication-note">A data-centric route to deeper cross-carrier fusion in Vision-Language Models.</p>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b>Feng Han</b><sup>1,2</sup></span>
+              <span class="author-block"><b>Zhixiong Zhang</b><sup>2,3</sup></span>
+              <span class="author-block"><b>Zheming Liang</b><sup>2,4</sup></span>
+              <span class="author-block"><b>Yibin Wang</b><sup>1,2</sup></span>
+              <span class="author-block"><b>Jiaqi Wang</b><sup>2,5,*</sup></span>
+            </div>
+            <div class="is-size-6 publication-affiliations">
+              <span class="author-block"><sup>1</sup>Fudan University</span>
+              <span class="author-block"><sup>2</sup>Shanghai Innovation Institute</span>
+              <span class="author-block"><sup>3</sup>Shanghai Jiao Tong University</span>
+              <span class="author-block"><sup>4</sup>University of Science and Technology of China</span>
+              <span class="author-block"><sup>5</sup>JD.COM</span>
+            </div>
+            <p class="publication-note">Toward deeper cross-carrier fusion in Vision-Language Models.</p>
 
             <div class="publication-links">
               <span class="link-block">
@@ -49,9 +62,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Why Carrier Sensitivity Matters</h2>
-          <p class="subtitle has-text-justified">
-            Current VLMs do not treat semantically equivalent text tokens and rendered text pixels as interchangeable. Rendering the same question as an image causes large accuracy drops, and larger cross-modal representation distances lead to stronger degradation.
+          <h2 class="title is-3">Carrier Sensitivity in VLMs</h2>
+          <p class="subtitle lomo-copy">
+            Replacing a textual question with its rendered-image counterpart should ideally leave VLM performance essentially unchanged because the semantics are the same. In practice, this local modality substitution causes large accuracy drops, and larger cross-modal representation distances lead to stronger degradation.
           </p>
         </div>
       </div>
@@ -67,7 +80,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">LoMo Overview</h2>
-          <p class="subtitle has-text-justified">
+          <p class="subtitle lomo-copy">
             LoMo converts a text-only instance into a text-image interleaved sequence. It localizes a coherent target span, renders the span as an image, applies semantics-preserving perceptual distortion, and substitutes the visual carrier back into the original position.
           </p>
         </div>
@@ -84,7 +97,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Benchmark Results</h2>
-          <p class="subtitle has-text-justified">
+          <p class="subtitle lomo-copy">
             Across 13 multimodal benchmarks, LoMo consistently improves over Standard SFT on two backbones: +2.68 average accuracy on LLaVA-OneVision-1.5-8B and +2.82 on Qwen3.5-9B under standard evaluation.
           </p>
         </div>
@@ -105,7 +118,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Alignment Improves With Scale</h2>
-          <p class="subtitle has-text-justified">
+          <p class="subtitle lomo-copy">
             LoMo improves average benchmark accuracy while reducing both Modality Integration Rate and pairwise cross-modal distance, indicating stronger alignment between text-as-tokens and text-as-pixels.
           </p>
         </div>
@@ -122,7 +135,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Ablation Studies</h2>
-          <p class="subtitle has-text-justified">
+          <p class="subtitle lomo-copy">
             The reported ablations show that structure-aware span localization is the dominant contributor, perceptual distortion gives additional robustness, and a middle-span text-image-text structure is most effective.
           </p>
         </div>
@@ -147,7 +160,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Pure-Text Capability Check</h2>
-          <p class="subtitle has-text-justified">
+          <p class="subtitle lomo-copy">
             LoMo preserves pure-text capability while improving multimodal performance, matching or slightly exceeding Standard SFT on five text-only benchmarks across the two tested backbones.
           </p>
         </div>
@@ -164,7 +177,7 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{lomo2026,
   title={LoMo: Local Modality Substitution for Deeper Vision-Language Fusion},
-  author={Anonymous Author(s)},
+  author={Feng Han and Zhixiong Zhang and Zheming Liang and Yibin Wang and Jiaqi Wang},
   journal={Technical Report},
   year={2026}
 }</code></pre>
