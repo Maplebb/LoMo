@@ -55,6 +55,12 @@ LoMo reformulates a text-only instance into an interleaved multimodal instance t
 2. **Visual Rendering.** The selected span is routed to a LaTeX renderer when it contains mathematical expressions and to a standard text renderer otherwise.
 3. **Perceptual Distortion.** The rendered image is perturbed with semantics-preserving visual degradations such as rotation, blur, stains, shadows, or local wave deformation.
 
+Compared with standard SFT, LoMo keeps the original supervision and adds an extra alignment signal by asking the model to solve the same instruction after a local text span is replaced by its rendered-image counterpart:
+
+<p align="center">
+  <strong>L<sub>LoMo</sub> = L<sub>SFT</sub>(x, y) + L<sub>SFT</sub>(LoMo(x), y)</strong>
+</p>
+
 This creates a training example where the answer still depends on the same semantics, but the model must combine textual context and rendered visual text within one sequence.
 
 ## Main Results

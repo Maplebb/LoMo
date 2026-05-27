@@ -68,6 +68,25 @@ body {
   text-align: left;
 }
 
+.lomo-formula {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+  padding: 0.8rem 1.15rem;
+  color: var(--lomo-ink);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--lomo-line);
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.06);
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+}
+
+.lomo-formula sub {
+  font-size: 0.72em;
+}
+
 .figure-block {
   margin-top: 2rem;
 }

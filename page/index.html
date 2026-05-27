@@ -81,8 +81,11 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">LoMo Overview</h2>
           <p class="subtitle lomo-copy">
-            LoMo converts a text-only instance into a text-image interleaved sequence. It localizes a coherent target span, renders the span as an image, applies semantics-preserving perceptual distortion, and substitutes the visual carrier back into the original position.
+            Compared with standard SFT, LoMo keeps the original supervision while adding an explicit alignment signal: the model must solve the same instruction after a local text span is replaced by its rendered-image counterpart. This encourages the token carrier and pixel carrier of the same semantics to become more interchangeable.
           </p>
+          <div class="lomo-formula" aria-label="LoMo training objective">
+            <span>L<sub>LoMo</sub> = L<sub>SFT</sub>(x, y) + L<sub>SFT</sub>(LoMo(x), y)</span>
+          </div>
         </div>
       </div>
       <div class="content has-text-centered figure-block">
