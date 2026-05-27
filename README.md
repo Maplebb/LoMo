@@ -31,7 +31,7 @@ Vision-Language Models still show **carrier sensitivity**: changing a textual qu
 
 ### ✨ Highlights:
 
-LoMo is a lightweight, architecture-agnostic data curation recipe for standard SFT. It localizes a coherent text span, renders it as an image, and substitutes it back into the original context to form a `text -> visual carrier -> text` sequence. This local substitution provides an extra cross-carrier alignment signal, requires no additional annotations, architectural changes, or inference-time overhead, and can be plugged into existing multimodal SFT pipelines.
+LoMo is a lightweight, architecture-agnostic data curation recipe for standard SFT. It localizes a coherent text span, renders it as an image, and substitutes it back into the original context to form a `text -> visual carrier -> text` sequence. This local substitution requires no additional annotations, architectural changes, or inference-time overhead, and can be plugged into existing multimodal SFT pipelines.
 
 <p align="center">
   <img src="page/static/images/fig_lomo_overview.png" alt="LoMo overview" width="900">
