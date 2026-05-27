@@ -57,6 +57,7 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity across VLMs">
+        <p class="figure-note">Rendering equivalent text as an image exposes a clear carrier gap; LoMo pulls paired text and rendered-image representations closer.</p>
       </div>
     </div>
   </section>
@@ -73,6 +74,7 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_lomo_overview.png" alt="Overview of LoMo">
+        <p class="figure-note">LoMo substitutes a local text span with a rendered visual carrier while preserving prefix and suffix context.</p>
       </div>
     </div>
   </section>
@@ -89,9 +91,11 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_benchmark_gains.png" alt="Benchmark gains across two backbones">
+        <p class="figure-note">Performance improves consistently across both tested VLM backbones and most benchmark categories.</p>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_main_results.png" alt="Main benchmark results table">
+        <p class="figure-note">LoMo improves standard evaluation and substantially narrows the gap under rendered-question evaluation.</p>
       </div>
     </div>
   </section>
@@ -108,6 +112,7 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_alignment_scale.png" alt="Data scale and cross-modal alignment">
+        <p class="figure-note">Accuracy rises with data scale while MIR and pairwise cross-modal distance decrease.</p>
       </div>
     </div>
   </section>
@@ -124,12 +129,15 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_component_ablation.png" alt="Component ablation">
+        <p class="figure-note">Structure-aware localization contributes most of the gain, and perceptual distortion adds robustness.</p>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_rewrite_ratio.png" alt="Rewrite ratio ablation">
+        <p class="figure-note">A 50% rewrite ratio gives the best average score in the reported LLaVA-OneVision-1.5-8B setting.</p>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_render_position.png" alt="Rendering position ablation">
+        <p class="figure-note">Rendering the middle span forms a text-image-text structure and outperforms prefix, suffix, and multi-span alternatives.</p>
       </div>
     </div>
   </section>
@@ -146,6 +154,7 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_pure_text.png" alt="Pure-text capability analysis">
+        <p class="figure-note">The multimodal gains do not come at the cost of pure-text capability.</p>
       </div>
     </div>
   </section>

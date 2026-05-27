@@ -63,6 +63,13 @@ body {
   box-shadow: 0 18px 42px rgba(23, 32, 51, 0.08);
 }
 
+.figure-note {
+  color: var(--lomo-muted);
+  font-size: 0.98rem;
+  margin: 0.8rem auto 0;
+  max-width: 820px;
+}
+
 pre {
   border-radius: 8px;
   border: 1px solid var(--lomo-line);

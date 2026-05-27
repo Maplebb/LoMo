@@ -24,10 +24,12 @@ Vision-Language Models (VLMs) can reason over both language and images, but they
 <p align="center">
   <img src="page/static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity and cross-modal alignment" width="900">
 </p>
+<p align="center"><em>Equivalent semantics in different carriers still produce a measurable modality gap.</em></p>
 
 <p align="center">
   <img src="page/static/images/fig_lomo_overview.png" alt="LoMo overview" width="900">
 </p>
+<p align="center"><em>LoMo turns a text-only instance into a local text-image-text training sequence.</em></p>
 
 ## Highlights
 
@@ -52,10 +54,12 @@ This creates a training example where the answer still depends on the same seman
 <p align="center">
   <img src="page/static/images/fig_benchmark_gains.png" alt="Benchmark gains across two backbones" width="900">
 </p>
+<p align="center"><em>LoMo improves average accuracy across both evaluated backbones.</em></p>
 
 <p align="center">
   <img src="page/static/images/table_main_results.png" alt="Main results table" width="900">
 </p>
+<p align="center"><em>Main results under standard and rendered evaluation protocols.</em></p>
 
 LoMo gives stable improvements across reasoning, math, factuality, instruction following, document/OCR understanding, and visual perception benchmarks. The gains become especially large under rendered evaluation, showing that LoMo directly addresses the cross-carrier fragility exposed by question rendering.
 
@@ -64,12 +68,14 @@ LoMo gives stable improvements across reasoning, math, factuality, instruction f
 <p align="center">
   <img src="page/static/images/fig_alignment_scale.png" alt="Data scale and representation alignment" width="900">
 </p>
+<p align="center"><em>LoMo improves accuracy and cross-modal representation alignment as data scale increases.</em></p>
 
 LoMo improves both benchmark accuracy and representation alignment as training data scale grows. It reduces Modality Integration Rate and pairwise cross-modal distance, indicating tighter alignment between text-token and rendered-image carriers.
 
 <p align="center">
   <img src="page/static/images/table_rewrite_ratio.png" alt="Rewrite ratio ablation" width="900">
 </p>
+<p align="center"><em>Rewrite-ratio ablation on LLaVA-OneVision-1.5-8B.</em></p>
 
 The 50% rewrite ratio performs best in the reported setting, suggesting that LoMo benefits from a balanced mix of ordinary text-only supervision and local text-as-image substitution.
 
