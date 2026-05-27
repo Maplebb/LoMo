@@ -81,14 +81,14 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">LoMo Overview</h2>
           <p class="subtitle lomo-copy">
-            LoMo turns a text-only training instance into a text-image-text interleaved instance through three components: structure-aware span localization selects a coherent middle span, visual rendering converts it into an image, and perceptual distortion makes the rendered carrier more robust while preserving semantics.
+            LoMo transforms a single-modal training instance into a text-image-text interleaved instance through three components: structure-aware span localization selects a coherent middle span, visual rendering converts it into an image, and perceptual distortion makes the rendered carrier more robust while preserving semantics.
           </p>
         </div>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_lomo_overview.png" alt="Overview of LoMo">
         <img class="formula-image" src="./static/images/eq_lomo_objective.png" alt="LoMo objective decomposition">
-        <p class="figure-note">Training on the substituted instance <span class="math-inline">T(x)</span> keeps the standard SFT supervision and introduces a cross-carrier alignment term, encouraging equivalent text and rendered-image carriers to produce consistent predictions.</p>
+        <p class="figure-note">Optimizing the substituted instance <span class="math-inline">T(x)</span> is equivalent to providing an extra cross-carrier alignment signal, encouraging equivalent text and rendered-image carriers to produce consistent predictions.</p>
       </div>
     </div>
   </section>
@@ -120,7 +120,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Alignment Improves With Scale</h2>
           <p class="subtitle lomo-copy">
-            LoMo improves average benchmark accuracy while reducing both Modality Integration Rate and pairwise cross-modal distance, indicating stronger alignment between text-as-tokens and text-as-pixels.
+            LoMo improves average benchmark accuracy while reducing both Modality Integration Rate and pairwise cross-modal distance, indicating stronger cross-modal fusion.
           </p>
         </div>
       </div>
@@ -136,22 +136,16 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Ablation Studies</h2>
-          <p class="subtitle lomo-copy">
-            The reported ablations show that structure-aware span localization is the dominant contributor, perceptual distortion gives additional robustness, and a middle-span text-image-text structure is most effective.
-          </p>
         </div>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_component_ablation.png" alt="Component ablation">
-        <p class="figure-note">Structure-aware localization contributes most of the gain, and perceptual distortion adds robustness.</p>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_rewrite_ratio.png" alt="Rewrite ratio ablation">
-        <p class="figure-note">A 50% rewrite ratio gives the best average score in the reported LLaVA-OneVision-1.5-8B setting.</p>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/table_render_position.png" alt="Rendering position ablation">
-        <p class="figure-note">Rendering the middle span forms a text-image-text structure and outperforms prefix, suffix, and multi-span alternatives.</p>
       </div>
     </div>
   </section>

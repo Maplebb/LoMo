@@ -49,13 +49,13 @@ Vision-Language Models (VLMs) can reason over both language and images, but repl
 
 ## Method
 
-LoMo reformulates a text-only instance into an interleaved multimodal instance through three stages:
+LoMo transforms a single-modal training instance into an interleaved multimodal instance through three stages:
 
 1. **Structure-Aware Span Localization.** The input is chunked in a formula-aware manner and a semantically coherent middle span is selected as the target visual span.
 2. **Visual Rendering.** The selected span is routed to a LaTeX renderer when it contains mathematical expressions and to a standard text renderer otherwise.
 3. **Perceptual Distortion.** The rendered image is perturbed with semantics-preserving visual degradations such as rotation, blur, stains, shadows, or local wave deformation.
 
-Compared with standard SFT, LoMo keeps the same answer supervision but replaces a local text carrier with its rendered visual counterpart. The paper shows that optimizing the carrier-substituted instance can be decomposed into standard SFT supervision plus a cross-carrier alignment term:
+The paper shows that optimizing the carrier-substituted instance is equivalent to providing an extra cross-carrier alignment signal:
 
 <p align="center">
   <img src="page/static/images/eq_lomo_objective.png" alt="LoMo objective decomposition" width="820">
@@ -84,14 +84,12 @@ LoMo gives stable improvements across reasoning, math, factuality, instruction f
 </p>
 <p align="center"><em>LoMo improves accuracy and cross-modal representation alignment as data scale increases.</em></p>
 
-LoMo improves both benchmark accuracy and representation alignment as training data scale grows. It reduces Modality Integration Rate and pairwise cross-modal distance, indicating tighter alignment between text-token and rendered-image carriers.
+LoMo improves both benchmark accuracy and representation alignment as training data scale grows. It reduces Modality Integration Rate and pairwise cross-modal distance, indicating stronger cross-modal fusion.
 
 <p align="center">
   <img src="page/static/images/table_rewrite_ratio.png" alt="Rewrite ratio ablation" width="900">
 </p>
 <p align="center"><em>Rewrite-ratio ablation on LLaVA-OneVision-1.5-8B.</em></p>
-
-The 50% rewrite ratio performs best in the reported setting, suggesting that LoMo benefits from a balanced mix of ordinary text-only supervision and local text-as-image substitution.
 
 ## Citation
 
