@@ -57,7 +57,11 @@
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity across VLMs">
-        <p class="figure-note">Rendering equivalent text as an image exposes a clear carrier gap; LoMo pulls paired text and rendered-image representations closer.</p>
+        <div class="subfigure-notes">
+          <p><b>(a)</b> Rendering the same question as an image causes a clear accuracy drop across strong VLMs.</p>
+          <p><b>(b)</b> Samples with larger text-image representation distance suffer larger performance degradation.</p>
+          <p><b>(c)</b> LoMo shifts paired representations closer together, indicating stronger cross-carrier alignment.</p>
+        </div>
       </div>
     </div>
   </section>

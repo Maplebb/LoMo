@@ -24,7 +24,7 @@ Vision-Language Models (VLMs) can reason over both language and images, but they
 <p align="center">
   <img src="page/static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity and cross-modal alignment" width="900">
 </p>
-<p align="center"><em>Equivalent semantics in different carriers still produce a measurable modality gap.</em></p>
+<p align="center"><em>(a) Rendered questions reduce accuracy. (b) Larger representation gaps cause larger drops. (c) LoMo pulls equivalent text/image carriers closer.</em></p>
 
 <p align="center">
   <img src="page/static/images/fig_lomo_overview.png" alt="LoMo overview" width="900">
