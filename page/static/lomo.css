@@ -68,23 +68,8 @@ body {
   text-align: left;
 }
 
-.lomo-formula {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.2rem;
-  padding: 0.8rem 1.15rem;
-  color: var(--lomo-ink);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--lomo-line);
-  border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.06);
-  font-size: 1.02rem;
-  letter-spacing: 0.01em;
-}
-
-.lomo-formula sub {
-  font-size: 0.72em;
+.math-inline {
+  white-space: nowrap;
 }
 
 .figure-block {
@@ -97,6 +82,18 @@ body {
   border: 1px solid var(--lomo-line);
   border-radius: 8px;
   box-shadow: 0 18px 42px rgba(23, 32, 51, 0.08);
+}
+
+.figure-block .formula-image {
+  display: block;
+  box-sizing: border-box;
+  width: min(100%, 900px);
+  margin: 1.15rem auto 0;
+  padding: 0.35rem 0.55rem;
+  background: white;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .figure-note {

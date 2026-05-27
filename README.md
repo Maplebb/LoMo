@@ -55,13 +55,13 @@ LoMo reformulates a text-only instance into an interleaved multimodal instance t
 2. **Visual Rendering.** The selected span is routed to a LaTeX renderer when it contains mathematical expressions and to a standard text renderer otherwise.
 3. **Perceptual Distortion.** The rendered image is perturbed with semantics-preserving visual degradations such as rotation, blur, stains, shadows, or local wave deformation.
 
-Compared with standard SFT, LoMo keeps the original supervision and adds an extra alignment signal by asking the model to solve the same instruction after a local text span is replaced by its rendered-image counterpart:
+Compared with standard SFT, LoMo keeps the same answer supervision but replaces a local text carrier with its rendered visual counterpart. The paper shows that optimizing the carrier-substituted instance can be decomposed into standard SFT supervision plus a cross-carrier alignment term:
 
 <p align="center">
-  <strong>L<sub>LoMo</sub> = L<sub>SFT</sub>(x, y) + L<sub>SFT</sub>(LoMo(x), y)</strong>
+  <img src="page/static/images/eq_lomo_objective.png" alt="LoMo objective decomposition" width="820">
 </p>
 
-This creates a training example where the answer still depends on the same semantics, but the model must combine textual context and rendered visual text within one sequence.
+Under expectation, the log-ratio corresponds to a KL-style pressure that aligns the model's predictions on the original text carrier and the substituted text-image carrier. This creates a training example where the answer still depends on the same semantics, but the model must combine textual context and rendered visual text within one sequence.
 
 ## Main Results
 

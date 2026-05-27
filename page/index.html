@@ -81,16 +81,14 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">LoMo Overview</h2>
           <p class="subtitle lomo-copy">
-            Compared with standard SFT, LoMo keeps the original supervision while adding an explicit alignment signal: the model must solve the same instruction after a local text span is replaced by its rendered-image counterpart. This encourages the token carrier and pixel carrier of the same semantics to become more interchangeable.
+            LoMo turns a text-only training instance into a text-image-text interleaved instance through three components: structure-aware span localization selects a coherent middle span, visual rendering converts it into an image, and perceptual distortion makes the rendered carrier more robust while preserving semantics.
           </p>
-          <div class="lomo-formula" aria-label="LoMo training objective">
-            <span>L<sub>LoMo</sub> = L<sub>SFT</sub>(x, y) + L<sub>SFT</sub>(LoMo(x), y)</span>
-          </div>
         </div>
       </div>
       <div class="content has-text-centered figure-block">
         <img src="./static/images/fig_lomo_overview.png" alt="Overview of LoMo">
-        <p class="figure-note">LoMo substitutes a local text span with a rendered visual carrier while preserving prefix and suffix context.</p>
+        <img class="formula-image" src="./static/images/eq_lomo_objective.png" alt="LoMo objective decomposition">
+        <p class="figure-note">Training on the substituted instance <span class="math-inline">T(x)</span> keeps the standard SFT supervision and introduces a cross-carrier alignment term, encouraging equivalent text and rendered-image carriers to produce consistent predictions.</p>
       </div>
     </div>
   </section>
