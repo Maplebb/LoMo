@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="LoMo: Local Modality Substitution for Deeper Vision-Language Fusion">
+  <meta name="keywords" content="Vision-Language Models, Multimodal Learning, Cross-Modal Alignment, Data Curation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoMo</title>
+
+  <link href="./static/css" rel="stylesheet">
+  <link rel="stylesheet" href="./static/bulma.min.css">
+  <link rel="stylesheet" href="./static/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/academicons.min.css">
+  <link rel="stylesheet" href="./static/index.css">
+  <link rel="stylesheet" href="./static/lomo.css">
+  <script defer src="./static/fontawesome.all.min.js"></script>
+</head>
+<body>
+  <section class="hero lomo-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LoMo: Local Modality Substitution for Deeper Vision-Language Fusion</h1>
+            <p class="subtitle is-5 publication-authors">Anonymous Author(s)</p>
+            <p class="publication-note">A data-centric route to deeper cross-carrier fusion in Vision-Language Models.</p>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="../LoMo-Technical-Report.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Maplebb/LoMo" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Why Carrier Sensitivity Matters</h2>
+          <p class="subtitle has-text-justified">
+            Current VLMs do not treat semantically equivalent text tokens and rendered text pixels as interchangeable. Rendering the same question as an image causes large accuracy drops, and larger cross-modal representation distances lead to stronger degradation.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity across VLMs">
+      </div>
+    </div>
+  </section>
+
+  <section class="section lomo-band">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">LoMo Overview</h2>
+          <p class="subtitle has-text-justified">
+            LoMo converts a text-only instance into a text-image interleaved sequence. It localizes a coherent target span, renders the span as an image, applies semantics-preserving perceptual distortion, and substitutes the visual carrier back into the original position.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/fig_lomo_overview.png" alt="Overview of LoMo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Benchmark Results</h2>
+          <p class="subtitle has-text-justified">
+            Across 13 multimodal benchmarks, LoMo consistently improves over Standard SFT on two backbones: +2.68 average accuracy on LLaVA-OneVision-1.5-8B and +2.82 on Qwen3.5-9B under standard evaluation.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/fig_benchmark_gains.png" alt="Benchmark gains across two backbones">
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/table_main_results.png" alt="Main benchmark results table">
+      </div>
+    </div>
+  </section>
+
+  <section class="section lomo-band">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Alignment Improves With Scale</h2>
+          <p class="subtitle has-text-justified">
+            LoMo improves average benchmark accuracy while reducing both Modality Integration Rate and pairwise cross-modal distance, indicating stronger alignment between text-as-tokens and text-as-pixels.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/fig_alignment_scale.png" alt="Data scale and cross-modal alignment">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Ablation Studies</h2>
+          <p class="subtitle has-text-justified">
+            The reported ablations show that structure-aware span localization is the dominant contributor, perceptual distortion gives additional robustness, and a middle-span text-image-text structure is most effective.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/table_component_ablation.png" alt="Component ablation">
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/table_rewrite_ratio.png" alt="Rewrite ratio ablation">
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/table_render_position.png" alt="Rendering position ablation">
+      </div>
+    </div>
+  </section>
+
+  <section class="section lomo-band">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Pure-Text Capability Check</h2>
+          <p class="subtitle has-text-justified">
+            LoMo preserves pure-text capability while improving multimodal performance, matching or slightly exceeding Standard SFT on five text-only benchmarks across the two tested backbones.
+          </p>
+        </div>
+      </div>
+      <div class="content has-text-centered figure-block">
+        <img src="./static/images/table_pure_text.png" alt="Pure-text capability analysis">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{lomo2026,
+  title={LoMo: Local Modality Substitution for Deeper Vision-Language Fusion},
+  author={Anonymous Author(s)},
+  journal={Technical Report},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
+</body>
+</html>

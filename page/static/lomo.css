@@ -1,0 +1,83 @@
+:root {
+  --lomo-ink: #172033;
+  --lomo-muted: #5b667a;
+  --lomo-line: #d8e1e8;
+  --lomo-sea: #2f8f83;
+  --lomo-coral: #d96b4c;
+  --lomo-mist: #eef7f5;
+  --lomo-paper: #fbfcfb;
+}
+
+body {
+  color: var(--lomo-ink);
+  background: var(--lomo-paper);
+}
+
+.lomo-hero {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(47, 143, 131, 0.20), transparent 32%),
+    linear-gradient(135deg, #f7fbf9 0%, #edf5f3 48%, #fff7f1 100%);
+  border-bottom: 1px solid var(--lomo-line);
+}
+
+.publication-title {
+  color: var(--lomo-ink);
+  line-height: 1.08;
+}
+
+.publication-note {
+  color: var(--lomo-muted);
+  font-size: 1.12rem;
+  margin: 0.75rem auto 1.2rem;
+  max-width: 760px;
+}
+
+.publication-links {
+  margin-top: 1rem;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.lomo-band {
+  background: linear-gradient(180deg, rgba(238, 247, 245, 0.92), rgba(255, 250, 246, 0.84));
+  border-top: 1px solid var(--lomo-line);
+  border-bottom: 1px solid var(--lomo-line);
+}
+
+.subtitle {
+  color: var(--lomo-muted);
+}
+
+.figure-block {
+  margin-top: 2rem;
+}
+
+.figure-block img {
+  width: min(100%, 980px);
+  background: white;
+  border: 1px solid var(--lomo-line);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(23, 32, 51, 0.08);
+}
+
+pre {
+  border-radius: 8px;
+  border: 1px solid var(--lomo-line);
+}
+
+@media screen and (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem !important;
+  }
+
+  .section {
+    padding: 2.8rem 1rem;
+  }
+
+  .figure-block img {
+    border-radius: 6px;
+  }
+}
