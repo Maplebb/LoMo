@@ -27,7 +27,7 @@ Vision-Language Models still show **carrier sensitivity**: changing a textual qu
 <p align="center">
   <img src="page/static/images/fig_carrier_sensitivity.png" alt="Carrier sensitivity and cross-modal alignment" width="900">
 </p>
-<p align="center"><em>(a) Rendered questions reduce accuracy. (b) Larger representation gaps cause larger drops. (c) LoMo pulls equivalent text/image carriers closer.</em></p>
+<p align="center"><em>Rendered questions reduce accuracy. Larger representation gaps cause larger drops. LoMo pulls equivalent text/image carriers closer.</em></p>
 
 ## Highlights
 
@@ -35,19 +35,15 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 
 ## Method
 
-LoMo transforms a single-modal training instance into an interleaved multimodal instance through three components: **Structure-Aware Span Localization** selects a coherent middle span, **Visual Rendering** converts it into an image, and **Perceptual Distortion** improves robustness while preserving semantics.
-
 <p align="center">
   <img src="page/static/images/fig_lomo_overview.png" alt="LoMo overview" width="900">
 </p>
-<p align="center"><em>LoMo creates a local text-image-text training sequence while preserving the original supervision target.</em></p>
 
 ## Main Results
 
 <p align="center">
   <img src="page/static/images/fig_benchmark_gains.png" alt="Benchmark gains across two backbones" width="900">
 </p>
-<p align="center"><em>LoMo consistently improves over Standard SFT across two VLM backbones and 13 multimodal benchmarks.</em></p>
 
 ## Citation
 
