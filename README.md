@@ -58,3 +58,7 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 For questions or suggestions, please open an issue in this repository.
 
 ## ⭐ Citation
+
+```bibtex
+
+```
