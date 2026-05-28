@@ -13,12 +13,13 @@
   <p>
     <a href="./LoMo-Technical-Report.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF"></a>
     <a href="https://maplebb.github.io/LoMo/"><img src="https://img.shields.io/badge/Website-project%20page-orange" alt="Project Page"></a>
+    <a href="https://huggingface.co/maplebb/LoMo-Checkpoints"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoints-yellow" alt="Checkpoints"></a>
   </p>
 </div>
 
 ## 🔥 News
 
-- [2026/05/27] 🔥🔥 We release the technical report and project page for **LoMo**.
+- [2026/05/29] 🔥🔥 We release the technical report, project page, and checkpoints for **LoMo**.
 
 ## Introduction
 
@@ -42,6 +43,15 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 </p>
 
 ## ✨ Evaluation
+
+- **Inference runtime**: LLaVA-OneVision-1.5 uses the Hugging Face backend; Qwen3.5 uses vLLM.
+- **Evaluation framework**: ModelScope.
+
+## 👨‍💻 Todo
+
+- [ ] Release the LoMo data construction code
+- [ ] Release the training and evaluation scripts
+- [x] Release the LoMo checkpoints
 
 ## 📧 Contact
 
