@@ -44,8 +44,8 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 
 ## ✨ Evaluation
 
-- **Inference runtime**: LLaVA-OneVision-1.5 uses the Hugging Face backend; Qwen3.5 uses vLLM.
-- **Evaluation framework**: ModelScope.
+We run inference with the Hugging Face backend for LLaVA-OneVision-1.5 and vLLM for Qwen3.5.
+We use ModelScope as the evaluation framework.
 
 ## 👨‍💻 Todo
 
