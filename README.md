@@ -21,7 +21,7 @@
 
 - [2026/05/29] 🔥🔥 We release the technical report, project page, and checkpoints for **LoMo**.
 
-## Introduction
+## 🌱 Introduction
 
 Vision-Language Models still show **carrier sensitivity**: changing a textual question into a rendered-image question can sharply reduce accuracy even when the semantics stay unchanged. **LoMo** addresses this gap by locally replacing part of a single-modal prompt with its rendered visual counterpart, encouraging VLMs to fuse equivalent information across text and image carriers.
 
@@ -44,8 +44,8 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 
 ## ✨ Evaluation
 
-We run inference with the Hugging Face backend for LLaVA-OneVision-1.5 and vLLM for Qwen3.5.
-We use ModelScope as the evaluation framework.
+We run inference with the [Hugging Face backend](https://github.com/huggingface/transformers) for LLaVA-OneVision-1.5 and [vLLM](https://github.com/vllm-project/vllm) for Qwen3.5.
+We use [ModelScope](https://github.com/modelscope/evalscope) as the evaluation framework.
 
 ## 👨‍💻 Todo
 
