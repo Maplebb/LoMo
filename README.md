@@ -58,12 +58,3 @@ LoMo is a lightweight, architecture-agnostic data curation recipe for standard S
 For questions or suggestions, please open an issue in this repository.
 
 ## ⭐ Citation
-
-```bibtex
-@article{lomo2026,
-  title={LoMo: Local Modality Substitution for Deeper Vision-Language Fusion},
-  author={Feng Han and Zhixiong Zhang and Zheming Liang and Yibin Wang and Jiaqi Wang},
-  journal={Technical Report},
-  year={2026}
-}
-```
