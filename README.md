@@ -11,7 +11,7 @@
   </p>
 
   <p>
-    <a href="./LoMo-Technical-Report.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF"></a>
+    <a href="http://arxiv.org/abs/2605.30265"><img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF"></a>
     <a href="https://maplebb.github.io/LoMo/"><img src="https://img.shields.io/badge/Website-project%20page-orange" alt="Project Page"></a>
     <a href="https://huggingface.co/maplebb/LoMo-Checkpoints"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoints-yellow" alt="Checkpoints"></a>
   </p>
