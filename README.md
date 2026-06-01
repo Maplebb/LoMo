@@ -60,5 +60,10 @@ For questions or suggestions, please open an issue in this repository.
 ## ⭐ Citation
 
 ```bibtex
-
+@article{han2026lomo,
+  title={LoMo: Local Modality Substitution for Deeper Vision-Language Fusion},
+  author={Han, Feng and Zhang, Zhixiong and Liang, Zheming and Wang, Yibin and Wang, Jiaqi},
+  journal={arXiv preprint arXiv:2605.30265},
+  year={2026}
+}
 ```
