@@ -19,6 +19,7 @@
 
 ## 🔥 News
 
+- [2026/09/25] ✨✨ LoMo is accepted to NeurIPS 2026.
 - [2026/05/29] 🔥🔥 We release the technical report, project page, and checkpoints for **LoMo**.
 
 ## 🌱 Introduction
